@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Task Masker</title>
+{% endblock %}
+
+
+{% block body %}
+<div class="content">
+    <h1>You're updating the task with {{  task_to_update.id }} id</h1>
+    <form action="/update/{{task_to_update.id}}" method="post">
+        <input type="text" value="{{task_to_update.content}}" name="content" id="content">
+        <input type="submit" value="Update Task">
+    </form>
+</div>
+{% endblock %}
